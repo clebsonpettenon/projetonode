@@ -1,15 +1,10 @@
 const express = require('express');
+const homeController = require('../controllers/homeController');
+const userController = require('../controllers/userController');
 
 const router = express.Router();
-router.get('/', (req, res)=>{
-    let obj = {
-        nome: 'Clebson',
-        idade: 31
-    }
-
-    res.render('home', obj);
-    
-});
+router.get('/', homeController.userMiddleware, homeController.index);
+router.get('/users/login', userController.login);
 
 
 

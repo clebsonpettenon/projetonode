@@ -1,3 +1,5 @@
-<h1>Seja Bem Vindo(a)</h1>
-<p>Qualquer mensagem</p>
-<p>Nome: {{nome}} - Idade: {{idade}}</p>
+{{> header}}
+
+<h2>Página Home</h2>
+<hr>
+<p>Usuário Logado: {{userInfo.name}}</p>
